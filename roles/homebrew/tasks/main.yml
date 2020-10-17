@@ -1,0 +1,6 @@
+---
+# tasks file for homebrew
+
+- homebrew:
+    name: fzf
+    state: present

@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../homelab/ansible"
+		},
+		{
+			"path": "../dotfiles"
+		}
+	]
+}

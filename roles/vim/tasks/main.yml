@@ -1,0 +1,38 @@
+---
+# tasks file for vim
+
+- name: Install Airline Plugin using Vim 8 Native Package Manager
+  git:
+    repo: https://github.com/vim-airline/vim-airline
+    dest: ~/.vim/pack/dist/start/vim-airline
+
+- name: Install helptags for Airline
+  shell: vim -u NONE -c "helptags ~/.vim/pack/dist/start/vim-airline/doc" -c q
+
+- name: Install NerdTree Plugin using Vim 8 Native Package Manager
+  git:
+    repo: https://github.com/preservim/nerdtree.git
+    dest: ~/.vim/pack/dist/start/nerdtree
+
+- name: Install helptags for NerdTree
+  shell: vim -u NONE -c "helptags ~/.vim/pack/dist/start/nerdtree/doc" -c q
+
+- name: Install Fzf Plugin using Vim 8 Native Package Manager
+  git:
+    repo: https://github.com/junegunn/fzf.git
+    dest: ~/.vim/pack/dist/start/fzf
+
+- name: Install Fzf.Vim settings using Vim 8 Native Package Manager
+  git:
+    repo: https://github.com/junegunn/fzf.vim.git
+    dest: ~/.vim/pack/dist/start/fzf.vim
+
+- name: Install GitGutter using Vim 8 Native Package Manager
+  git:
+    repo: https://github.com/airblade/vim-gitgutter.git
+    dest: ~/.vim/pack/dist/start/vim-gitgutter.vim
+
+- name: Install vim-multiple-cursors (sublimetext like multi select) using Vim 8 Native Package Manager
+  git:
+    repo: https://github.com/terryma/vim-multiple-cursors.git
+    dest: ~/.vim/pack/dist/start/vim-multiple-cursors
