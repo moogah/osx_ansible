@@ -1,0 +1,14 @@
+---
+# tasks file for monome-crow
+
+- name: Install dfu-util for monome crow
+  homebrew:
+    name: dfu-util
+    state: present
+
+- name: Install monome-druid package
+  pip:
+    name: monome-druid
+
+- name: Homebrew Cleanup
+  command: brew cleanup

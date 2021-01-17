@@ -1,0 +1,15 @@
+#!/usr/bin/env ansible-playbook
+
+- hosts: localhost
+  connection: local
+  tasks:
+    - name: Update homebrew
+      homebrew:
+        name: git
+        state: latest
+        update_homebrew: true
+
+    - name: install vault
+      homebrew:
+        name: hashicorp/tap/vault
+        state: present

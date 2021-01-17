@@ -2,7 +2,8 @@
 - hosts: localhost
   connection: local
   tasks:
-  - debug:
+  - name: Check we are running in the directory of the script
+    debug:
       msg: Check we are running in the directory of the script
     failed_when: not ansible_env.PWD.endswith('/osx_ansible')
 
@@ -11,3 +12,4 @@
   roles:
   - vim
   - homebrew
+  - monome-crow

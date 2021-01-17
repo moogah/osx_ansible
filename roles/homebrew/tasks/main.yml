@@ -1,6 +1,34 @@
 ---
 # tasks file for homebrew
 
-- homebrew:
+- name: Update homebrew
+  homebrew:
+    name: git
+    state: latest
+    update_homebrew: true
+
+- name: install fzf
+  homebrew:
     name: fzf
     state: present
+
+- name: install neovim
+  homebrew:
+    name: neovim 
+    state: present
+
+- name: add hashicorp tap
+  command: brew tap hashicorp/tap
+
+- name: Install Packer
+  homebrew:
+    name: hashicorp/tap/packer 
+    state: present
+
+- name: Install QEMU
+  homebrew:
+    name: qemu
+    state: present
+
+- name: Homebrew Cleanup
+  command: brew cleanup
