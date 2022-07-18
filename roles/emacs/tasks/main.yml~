@@ -1,0 +1,14 @@
+---
+# tasks file for emacs
+
+- name: Update homebrew
+  homebrew:
+    name: git
+    state: latest
+    update_homebrew: true
+
+- name: install emacs
+  community.general.homebrew_cask:
+    name: emacs
+    state: present
+    install_options: force
