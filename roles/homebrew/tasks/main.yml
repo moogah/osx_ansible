@@ -1,5 +1,6 @@
 ---
 # tasks file for homebrew
+# TODO: add ffmpeg, youtube-dl
 
 - name: Update homebrew
   homebrew:
@@ -12,22 +13,57 @@
     name: fzf
     state: present
 
+- name: install watch
+  homebrew:
+    name: watch
+    state: present
+
 - name: install neovim
   homebrew:
-    name: neovim 
+    name: neovim
     state: present
+# failss with 'cask pgadmin is already installed'
+# - name: install pgadmin
+  # homebrew:
+  #   name: pgadmin4
+  #   state: present
 
 - name: add hashicorp tap
   command: brew tap hashicorp/tap
 
 - name: Install Packer
   homebrew:
-    name: hashicorp/tap/packer 
+    name: hashicorp/tap/packer
+    state: present
+
+- name: Install osxfuse for TabFS browser extension
+  homebrew:
+    name: osxfuse
     state: present
 
 - name: Install QEMU
   homebrew:
     name: qemu
+    state: present
+
+- name: install ffmpeg
+  homebrew:
+    name: ffmpeg
+    state: present
+
+- name: install youtube-dl
+  homebrew:
+    name: youtube-dl
+    state: present
+
+- name: install id3ed
+  homebrew:
+    name: id3ed
+    state: present
+# .wav file metadata editor
+- name: install bwfmetaedit
+  homebrew:
+    name: bwfmetaedit
     state: present
 
 - name: Homebrew Cleanup
