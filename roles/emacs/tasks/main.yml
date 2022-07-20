@@ -16,3 +16,9 @@
 - name: install autopep8 for python development
   ansible.builtin.pip:
     name: autopep8
+
+# fails if not run as root?
+- name: install puppet-lint
+  community.general.gem:
+    name: puppet-lint
+    state: present
