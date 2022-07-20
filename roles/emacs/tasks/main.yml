@@ -13,6 +13,12 @@
     state: present
     install_options: force
 
+# fd is used by dirvish
+- name: install fd
+  homebrew:
+    name: fd
+    state: present
+
 - name: install autopep8 for python development
   ansible.builtin.pip:
     name: autopep8
