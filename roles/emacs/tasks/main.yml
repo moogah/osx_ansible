@@ -19,6 +19,13 @@
     name: fd
     state: present
 
+# dirvish will complain about ls without this
+- name: install coreutils
+  homebrew:
+    name: coreutils
+    state: present
+
+
 - name: install autopep8 for python development
   ansible.builtin.pip:
     name: autopep8
