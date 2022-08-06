@@ -1,0 +1,8 @@
+---
+# tasks file for cli-tools
+
+# ranger directory navigator
+- name: install ranger
+  homebrew:
+    name: ranger
+    state: present

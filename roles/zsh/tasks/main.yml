@@ -1,0 +1,8 @@
+---
+# tasks file for zsh
+
+# Install zsh-vi-mode
+- name: Install zsh-vi-mode
+  git:
+    repo: https://github.com/jeffreytse/zsh-vi-mode
+    dest: $ZSH/custom/plugins/zsh-vi-mode

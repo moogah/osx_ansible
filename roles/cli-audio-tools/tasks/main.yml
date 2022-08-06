@@ -1,0 +1,18 @@
+---
+# tasks file for cli-audio-tools
+
+- name: install cmus
+  homebrew:
+    name: cmus
+- name: install moc
+  homebrew:
+    name: moc 
+
+
+- name: install sox
+  homebrew:
+    name: sox
+
+- name: install aubio
+  homebrew:
+    name: aubio
