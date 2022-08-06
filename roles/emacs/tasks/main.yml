@@ -7,13 +7,50 @@
     state: latest
     update_homebrew: true
 
+- name: Tap
+  community.general.homebrew_tap:
+    name: homebrew/cask-fonts
+    state: present
+
+- name: install nerd fonts
+  community.general.homebrew_cask:
+    name: font-hack-nerd-font
+    state: present
+    
 - name: install emacs
   community.general.homebrew_cask:
     name: emacs
     state: present
     install_options: force
+  
+# -------------------------------------------------------------------------------
+# Install pdf-tools dependencies
+# -------------------------------------------------------------------------------
 
-# fd is used by dirvish
+- name: install poppler
+  homebrew:
+    name: poppler
+    state: present
+
+- name: install automake
+  homebrew:
+    name: automake
+    state: present
+
+- name: install zlib
+  homebrew:
+    name: zlib
+    state: present
+
+- name: install expat
+  homebrew:
+    name: expat
+    state: present
+
+# -------------------------------------------------------------------------------
+# Install dirvish dependencies
+# -------------------------------------------------------------------------------
+
 - name: install fd
   homebrew:
     name: fd
@@ -25,6 +62,18 @@
     name: coreutils
     state: present
 
+# -------------------------------------------------------------------------------
+# Install ripgrep
+# -------------------------------------------------------------------------------
+
+- name: install ripgrep
+  homebrew:
+    name: ripgrep
+    state: present
+
+# -------------------------------------------------------------------------------
+# Install python tools
+# -------------------------------------------------------------------------------
 
 - name: install autopep8 for python development
   ansible.builtin.pip:
