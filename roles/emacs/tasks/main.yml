@@ -33,6 +33,24 @@
     state: directory
     mode: '0755'
 
+- name: create org agenda directory
+  ansible.builtin.file:
+    path: ~/org/agenda
+    state: directory
+    mode: '0755'
+
+- name: create nested org-roam directory
+  ansible.builtin.file:
+    path: ~/org/roam
+    state: directory
+    mode: '0755'
+
+- name: create org-roam inbox directory
+  ansible.builtin.file:
+    path: ~/org/roam/inbox
+    state: directory
+    mode: '0755'
+
 - name: create org-roam directory
   ansible.builtin.file:
     path: ~/org-roam
@@ -99,4 +117,13 @@
 - name: install puppet-lint
   community.general.gem:
     name: puppet-lint
+    state: present
+
+# -------------------------------------------------------------------------------
+# Install gpg
+# -------------------------------------------------------------------------------
+
+- name: install gpg
+  homebrew:
+    name: gpg
     state: present
