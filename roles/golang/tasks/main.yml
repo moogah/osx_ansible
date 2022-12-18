@@ -1,0 +1,7 @@
+---
+# tasks file for golang
+
+- name: install go with homebrew
+  homebrew:
+    name: go@1.19
+    state: present

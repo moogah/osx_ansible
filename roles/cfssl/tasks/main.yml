@@ -1,0 +1,12 @@
+---
+# tasks file for cfssl
+
+- name: instal cfssl
+  ansible.builtin.command: /usr/local/bin/go install github.com/cloudflare/cfssl/cmd/cfssl@latest
+#  environment:
+#    GOPATH: /usr/local/go
+
+- name: instal cfssljson
+  ansible.builtin.command: /usr/local/bin/go install github.com/cloudflare/cfssl/cmd/cfssljson@latest
+#  environment:
+#    GOPATH: "/usr/local/go"
