@@ -6,3 +6,8 @@
   homebrew:
     name: ranger
     state: present
+
+- name: install modern cli tools
+  homebrew:
+    name: "{{ modern_cli_tools }}"
+    state: present

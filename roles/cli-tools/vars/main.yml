@@ -1,2 +1,13 @@
 ---
 # vars file for cli-tools
+
+modern_cli_tools:
+  - bat
+  - exa
+  - dust
+  - duf
+  - fd
+  - tldr
+  - ripgrep
+  - procs
+  - zoxide
