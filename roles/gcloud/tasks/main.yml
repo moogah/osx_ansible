@@ -1,0 +1,8 @@
+---
+# tasks file for gcloud
+
+- name: download golang cli
+  ansible.builtin.get_url:
+    url: https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-cli-412.0.0-darwin-x86_64.tar.gz
+    dest: /Users/jefffarr/ 
+
