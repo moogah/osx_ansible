@@ -127,3 +127,14 @@
   homebrew:
     name: gpg
     state: present
+
+# -------------------------------------------------------------------------------
+# Install tree-sitter libraries
+# -------------------------------------------------------------------------------
+
+- name: install tree-sitter-yaml
+  #become: true
+  community.general.npm:
+    name: tree-sitter-yaml
+    #path: /usr/local/lib
+    global: true
