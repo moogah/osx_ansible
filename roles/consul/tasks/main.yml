@@ -1,2 +1,10 @@
 ---
 # tasks file for consul
+- name: add hashicorp tap
+  command: brew tap hashicorp/tap
+
+- name: install consul
+  homebrew:
+    name: hashicorp/tap/consul
+    state: present
+      
