@@ -1,0 +1,9 @@
+---
+# tasks file for terraform
+- name: add hashicorp tap
+  command: brew tap hashicorp/tap
+
+- name: Install Terraform
+  homebrew:
+    name: hashicorp/tap/terraform
+    state: present
